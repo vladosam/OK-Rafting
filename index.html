@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#143d2b" />
+<!-- Social share (Open Graph + Twitter) -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ok-rafting.21051976.xyz/" />
+<meta property="og:title" content="OK Rafting 2026 · Drina · Foča" />
+<meta property="og:description" content="Rafting na Drini, Foča — 16.08.2026. Ekipa, čamac, pivo i roštilj." />
+<meta property="og:image" content="https://ok-rafting.21051976.xyz/img/ok.png" />
+<meta property="og:image:width" content="329" />
+<meta property="og:image:height" content="221" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="OK Rafting 2026 · Drina · Foča" />
+<meta name="twitter:description" content="Rafting na Drini, Foča — 16.08.2026. Ekipa, čamac, pivo i roštilj." />
+<meta name="twitter:image" content="https://ok-rafting.21051976.xyz/img/ok.png" />
+<title>OK Rafting 2026 · Drina · Foča · 16.08.</title>
+<meta name="description" content="OK Rafting 2026 — rafting na Drini, Foča. 16.08.2026. Ekipa, čamac, pivo i roštilj." />
+
+<!-- Favicon: mali čamac -->
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="img/ok.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="img/ok.png" />
+<link rel="canonical" href="https://ok-rafting.21051976.xyz/" />
+
+<!-- Fontovi -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --green-dark:#143d2b;
+    --green:#1f6b43;
+    --green-mid:#2f7d54;
+    --green-soft:#e9f3e6;
+    --water:#2a9d8f;
+    --water-deep:#1d6b66;
+    --cream:#fbf7ee;
+    --sun:#f4b942;
+    --orange:#e8703a;
+    --orange-deep:#c75628;
+    --ink:#16271f;
+    --ink-strong:#121313;
+    --muted:#5d6b62;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:67px}
+  body{
+    margin:0;
+    font-family:'Nunito',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{font-family:'Anton','Nunito',sans-serif;font-weight:400;letter-spacing:.5px;line-height:1.02}
+
+  .container{max-width:1120px;margin:0 auto;padding:0 22px}
+  a{color:var(--green)}
+
+  /* ---------- NAV ---------- */
+  .nav{position:fixed;top:0;left:0;width:100%;z-index:50;background:rgba(251,247,238,.86);
+       backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+       border-bottom:1px solid rgba(20,61,43,.1)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--green-dark)}
+  .brand .emblem{height:44px;width:auto;flex:none;object-fit:contain}
+  .brand b{font-family:'Anton',sans-serif;font-size:1.18rem;letter-spacing:1px}
+  .brand small{display:block;font-family:'Nunito',sans-serif;font-weight:800;font-size:.62rem;letter-spacing:2px;color:var(--orange);margin-top:-2px}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a{text-decoration:none;color:var(--ink);font-weight:800;font-size:.92rem}
+  .nav-links a:hover{color:var(--green)}
+  .nav-toggle{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;border-radius:10px}
+  .nav-toggle span{display:block;width:24px;height:2.5px;background:var(--green-dark);border-radius:2px;transition:transform .25s,opacity .25s;will-change:transform;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+  .nav-toggle:hover{background:var(--green-soft)}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;
+        text-align:center;overflow:hidden;padding:110px 0 70px}
+  .hero-scene{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+  .hero-card{position:relative;z-index:2;background:rgba(20,61,43,.6);
+             backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
+             border:1px solid rgba(255,255,255,.2);border-radius:30px;
+             padding:42px 34px;max-width:680px;margin:0 16px;
+             box-shadow:0 30px 70px rgba(0,0,0,.3);color:var(--cream)}
+  .hero .emblem{height:138px;width:auto;margin:0 auto 20px;display:block;object-fit:contain;filter:drop-shadow(0 6px 14px rgba(0,0,0,.3))}
+  .hero h1{font-size:clamp(2.9rem,9vw,5.4rem);margin:2px 0 4px;color:#fff;
+           text-shadow:0 2px 22px rgba(0,0,0,.4)}
+  .hero .tag-year{display:inline-block;font-family:'Anton',sans-serif;color:var(--sun);
+                  letter-spacing:3px;font-size:clamp(1.1rem,3vw,1.5rem)}
+  .pills{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:18px 0 4px}
+  .pill{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.14);
+        border:1px solid rgba(255,255,255,.32);padding:8px 16px;border-radius:999px;
+        font-weight:800;font-size:.9rem;letter-spacing:.5px}
+  .countdown{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:16px 0 2px}
+  .cd-unit{min-width:60px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.30);
+           border-radius:14px;padding:9px 10px;text-align:center}
+  .cd-num{display:block;font-family:'Anton',sans-serif;font-size:1.7rem;line-height:1;color:#fff;font-variant-numeric:tabular-nums}
+  .cd-lbl{display:block;font-size:.6rem;letter-spacing:1.5px;text-transform:uppercase;color:#f3f0e6;opacity:.82;margin-top:4px}
+  .cd-go{font-family:'Anton',sans-serif;color:var(--sun);letter-spacing:1px;font-size:1.2rem}
+  .pill svg{width:16px;height:16px}
+  .hero-tagline{max-width:44ch;margin:20px auto 26px;font-size:1.06rem;line-height:1.55;color:#f3f0e6}
+  
+  /* ---------- SEKCIJE ---------- */
+  section{padding:40px 0;position:relative}
+  .sec-head{max-width:680px;margin-bottom:14px}
+  .kicker{font-family:'Anton',sans-serif;letter-spacing:3px;color:var(--orange);
+          font-size:.95rem;display:inline-flex;align-items:center;gap:9px}
+  .section-title{font-size:clamp(2.1rem,5.5vw,3.4rem);margin:12px 0 8px;color:var(--green-dark)}
+  .title-wave{width:120px;height:16px;color:var(--water);display:block;margin-top:6px}
+  .lead{font-size:1.08rem;color:var(--muted);max-width:60ch}
+
+  /* ---------- VIBE ---------- */
+  #zasto{background:var(--cream)}
+  .vibe-text{max-width:62ch;color:var(--muted);font-size:1.1rem}
+  .vibe-text b{color:var(--green-dark)}
+  .vibe-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:46px}
+  .vibe-card{text-align:center;background:var(--green-soft);border-radius:20px;padding:26px 14px;
+             transition:transform .18s}
+  .vibe-card:hover{transform:translateY(-5px)}
+  .vibe-card .ico{width:64px;height:64px;margin:0 auto 14px;display:block}
+  .vibe-card h3{font-size:1.18rem;color:var(--green-dark);margin:0 0 6px;letter-spacing:1px}
+  .vibe-card p{font-size:.88rem;color:var(--ink-strong);margin:0;line-height:1.45}
+
+  /* ---------- PROGRAM ---------- */
+  #program{background:var(--cream)}
+  .program-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:46px;align-items:start}
+  .day-card{background:#fff;border-radius:22px;padding:28px 24px;border:1px solid rgba(20,61,43,.09);
+            box-shadow:0 12px 28px rgba(20,61,43,.06);position:relative}
+  .day-card.featured{border:2px solid var(--orange);
+                     box-shadow:0 18px 40px rgba(232,112,58,.18);transform:translateY(-8px)}
+  .day-tag{font-family:'Anton',sans-serif;color:var(--orange);letter-spacing:2px;font-size:1.05rem}
+  .day-date{font-weight:800;color:var(--green);font-size:.92rem;letter-spacing:.5px}
+  .day-title{font-size:1.55rem;color:var(--green-dark);margin:4px 0 18px}
+  .badge-glavni{position:absolute;top:-13px;right:18px;background:var(--orange);color:#fff;
+                font-family:'Anton',sans-serif;letter-spacing:1.5px;font-size:.78rem;
+                padding:6px 12px;border-radius:999px}
+  .timeline{list-style:none;padding:0;margin:0}
+  .timeline li{display:flex;gap:14px;padding:11px 0;border-top:1px dashed rgba(20,61,43,.16);align-items:baseline}
+  .timeline li:first-child{border-top:none}
+  .timeline .t{font-weight:900;color:var(--green);min-width:56px;font-size:.86rem;font-variant-numeric:tabular-nums}
+  .timeline .x{color:var(--ink);font-size:.96rem}
+  .timeline .x b{display:block;color:var(--green-dark)}
+
+  /* ---------- INFO ---------- */
+  #info{background:var(--cream)}
+  .info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:46px}
+  .info-card{background:#fff;border-radius:22px;padding:30px 28px;
+             border-top:6px solid var(--green);
+             box-shadow:0 12px 28px rgba(20,61,43,.06)}
+  .info-card .head{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+  .info-card .ico{width:46px;height:46px;flex:none}
+  .info-card h3{font-size:1.5rem;color:var(--green-dark);margin:0;letter-spacing:1px}
+  .price-big{font-family:'Anton',sans-serif;color:var(--orange);font-size:2.6rem;line-height:1;margin:6px 0 4px}
+  .price-sub{color:var(--muted);font-weight:700;font-size:.95rem}
+  .checklist{list-style:none;padding:0;margin:8px 0 0}
+  .checklist li{position:relative;padding-left:30px;margin:9px 0;color:var(--ink)}
+  .checklist li::before{content:"✓";position:absolute;left:0;top:0;color:var(--green);font-weight:900;font-size:1.05rem}
+  .travel-note{background:var(--green-soft);border-radius:14px;padding:14px 16px;margin-top:12px;font-size:.94rem;color:var(--green-dark)}
+
+  /* ---------- FOOTER ---------- */
+
+  footer.bottom{background:var(--green-dark);color:#9fb8ac;text-align:center;
+                padding:0 0 34px;font-size:.85rem;border-top:1px solid rgba(255,255,255,.08)}
+  footer.bottom .container{padding-top:0}
+  footer.bottom .social{display:flex;justify-content:center;gap:14px;margin-top:12px}
+  footer.bottom .social a{color:#fff;opacity:.7;transition:opacity .2s;display:inline-flex;line-height:0}
+  footer.bottom .social a:hover{opacity:1}
+  footer.bottom .social svg{width:26px;height:26px;fill:currentColor}
+
+  /* ---------- ANIMACIJE ---------- */
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+  @keyframes bob{0%,100%{transform:translateY(0) rotate(-1.1deg)}50%{transform:translateY(-7px) rotate(1.1deg)}}
+  .birds{animation:floaty 6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+  .sboat{animation:bob 5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+  .sring{animation:bob 5s ease-in-out infinite;animation-delay:-2.4s;transform-box:fill-box;transform-origin:center}
+  @media (prefers-reduced-motion:reduce){.birds,.sboat,.sring{animation:none}}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:980px){.vibe-grid{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:860px){
+    .program-grid{grid-template-columns:1fr}
+    .day-card.featured{transform:none}
+    .nav-toggle{display:flex}
+    .nav-links{position:absolute;top:66px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(251,247,238,.98);backdrop-filter:blur(8px);box-shadow:0 14px 24px rgba(0,0,0,.12);padding:6px 0;transform:translateY(-10px);opacity:0;pointer-events:none;transition:.22s ease}
+    .nav-links.open{transform:none;opacity:1;pointer-events:auto}
+    .nav-links a{padding:14px 22px;border-bottom:1px solid rgba(43,79,56,.08);font-size:1rem}
+    .nav-links a:last-child{border-bottom:0}
+    .nav-toggle.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .nav-toggle.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  }
+  @media (max-width:680px){
+    .vibe-grid{grid-template-columns:repeat(2,1fr)}
+    .info-grid{grid-template-columns:1fr}
+    section{padding:32px 0}
+    .hero{padding:96px 0 60px}
+    .countdown{gap:5px}
+    .cd-unit{min-width:46px;padding:7px 6px}
+    .cd-num{font-size:1.4rem}
+    .cd-lbl{font-size:.55rem;letter-spacing:1px;margin-top:3px}
+    .vibe-card p{font-size:.95rem}
+    .timeline .t{font-size:.92rem}
+  }
+  @media (max-width:420px){.vibe-grid{grid-template-columns:1fr}}
+  .cta-band{position:relative;padding:64px 16px 72px;overflow:hidden}
+  .cta-bg{position:absolute;inset:0;width:100%;height:100%;z-index:0;display:block}
+  .cta-card{position:relative;z-index:1;max-width:680px;margin:0 auto;
+            background:rgba(20,61,43,.6);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
+            border:1px solid rgba(255,255,255,.2);border-radius:30px;
+            padding:44px 34px;text-align:center;color:var(--cream);
+            box-shadow:0 30px 70px rgba(0,0,0,.28)}
+  .cta-card .countdown{margin:24px 0 6px}
+  .cta-sub{font-style:italic;font-size:.95rem;color:#cfe2d6;margin:0 0 18px;letter-spacing:.5px}
+  .cta-title{font-family:'Anton',sans-serif;font-size:clamp(2rem,6vw,3rem);color:#fff;
+             letter-spacing:1px;margin:0;text-shadow:0 2px 18px rgba(0,0,0,.3)}
+  .cta-text{max-width:46ch;margin:0 auto;font-size:1.05rem;line-height:1.6;color:#f3f0e6}
+
+  /* legibility: reading text -> semibold (Nunito 400 looks thin on phones) */
+  .hero-tagline,.vibe-text,.lead,.timeline .x,.checklist li,.cta-text,.cta-sub,.travel-note,.vibe-card p,footer.bottom{font-weight:600}
+
+  /* ---------- CALENDAR / TERMINI ---------- */
+  .cal-intro{max-width:60ch;margin:0 0 18px;color:var(--muted);font-weight:600}
+  .cal-wrap{max-width:520px;margin:0 auto;background:#fff;border:2px solid rgba(20,61,43,.12);
+    border-radius:20px;padding:20px 18px 16px;box-shadow:0 12px 32px rgba(20,61,43,.09)}
+  .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+  .cal-month{font-family:'Anton',sans-serif;font-size:1.55rem;letter-spacing:.6px;color:var(--green-dark);text-transform:uppercase;line-height:1}
+  .cal-nav{width:42px;height:42px;border-radius:12px;border:1px solid rgba(20,61,43,.18);background:#fff;
+    color:var(--green-dark);font-size:1.4rem;line-height:1;cursor:pointer;transition:background .15s,color .15s}
+  .cal-nav:hover:not(:disabled){background:var(--green-soft)}
+  .cal-nav:disabled{opacity:.28;cursor:not-allowed}
+  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+  .cal-dow span{text-align:center;font-size:.64rem;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:800;padding:4px 0}
+  .cal-days{margin-top:4px}
+  .cal-day{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;font-size:.95rem;color:var(--ink)}
+  .cal-day.out{opacity:.22}
+  .cal-day.today{outline:2px solid var(--orange);outline-offset:2px;border-radius:14px}
+  .cal-day .num{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;font-weight:800}
+  .cal-day.free .num{background:var(--green);color:#fff}
+  .cal-day.busy .num{background:#dc2127;color:#fff;text-decoration:line-through;text-decoration-thickness:2px}
+  .cal-legend{display:flex;gap:24px;justify-content:center;margin-top:16px;flex-wrap:wrap;padding-top:14px;border-top:1px solid rgba(20,61,43,.08)}
+  .cal-legend .lg{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:.85rem;color:var(--ink)}
+  .cal-legend .dot{width:13px;height:13px;border-radius:50%;display:inline-block}
+  .cal-legend .dot-free{background:var(--green)}
+  .cal-legend .dot-busy{background:#dc2127}
+  .cal-hint{text-align:center;margin:12px 0 0;font-size:.82rem;color:var(--muted);font-weight:600}
+  @media(max-width:480px){
+    .cal-day .num{width:32px;height:32px;font-size:.85rem}
+    .cal-month{font-size:1.3rem}
+    .cal-wrap{padding:16px 12px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ SVG DEFS (ikone + emblem) — ne moraš dirati ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+
+    <symbol id="ico-boat" viewBox="0 0 64 64">
+      <!-- inflatable tube ring -->
+      <rect x="6" y="18" width="52" height="28" rx="14" fill="#e8703a" stroke="#c75628" stroke-width="2"/>
+      <rect x="9" y="20.6" width="46" height="3" rx="1.5" fill="#f6a36b"/>
+      <!-- center well -->
+      <rect x="13.5" y="24" width="37" height="16" rx="7" fill="#fbf7ee"/>
+      <!-- cross thwarts (inflated seats) -->
+      <rect x="14" y="26" width="36" height="4.6" rx="2.3" fill="#e8703a" stroke="#c75628" stroke-width="1"/>
+      <rect x="14" y="33.4" width="36" height="4.6" rx="2.3" fill="#e8703a" stroke="#c75628" stroke-width="1"/>
+      <!-- crew (helmets) -->
+      <g fill="#143d2b"><circle cx="24" cy="28.3" r="2"/><circle cx="40" cy="28.3" r="2"/><circle cx="24" cy="35.7" r="2"/><circle cx="40" cy="35.7" r="2"/></g>
+    </symbol>
+
+    <symbol id="ico-paddle" viewBox="0 0 64 64">
+      <!-- T-grip -->
+      <rect x="21" y="5" width="22" height="5.6" rx="2.8" fill="#7a5230"/>
+      <rect x="22.5" y="6.2" width="9" height="1.7" rx="0.85" fill="#a07449"/>
+      <!-- shaft -->
+      <rect x="29.4" y="9" width="5.2" height="34" rx="2.6" fill="#7a5230"/>
+      <rect x="30.4" y="10.5" width="1.6" height="31" rx="0.8" fill="#a07449"/>
+      <!-- blade (leaf) -->
+      <path d="M32 40 C22 44 21 53 32 58 C43 53 42 44 32 40 Z" fill="#e8703a" stroke="#c75628" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M34 43 C40 47 41 52 36 56" fill="none" stroke="#f6a36b" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="ico-beer" viewBox="0 0 64 64">
+      <rect x="18" y="24" width="22" height="30" rx="3" fill="#f4b41a"/>
+      <rect x="18" y="24" width="22" height="8" fill="#fff3cf"/>
+      <path d="M40 30 q11 0 11 9 q0 9 -11 9" fill="none" stroke="#f4b41a" stroke-width="4"/>
+      <circle cx="22" cy="20" r="6.5" fill="#fff"/><circle cx="31" cy="17" r="7.5" fill="#fff"/><circle cx="39" cy="21" r="5.5" fill="#fff"/>
+      <rect x="24" y="34" width="3" height="14" rx="1.5" fill="#fff7da" opacity=".7"/>
+    </symbol>
+
+    <symbol id="ico-grill" viewBox="0 0 64 64">
+      <g stroke="#aebbb5" stroke-width="2.5" fill="none" stroke-linecap="round">
+        <path d="M26 16 q-5 -5 0 -9"/><path d="M34 14 q5 -5 0 -9"/>
+      </g>
+      <line x1="18" y1="40" x2="13" y2="56" stroke="#3a4a44" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="46" y1="40" x2="51" y2="56" stroke="#3a4a44" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M8 38 Q32 58 56 38 Z" fill="#46584f"/>
+      <rect x="11" y="34" width="42" height="6" rx="3" fill="#2b342f"/>
+      <g fill="#2b342f"><rect x="20" y="34" width="2" height="6"/><rect x="32" y="34" width="2" height="6"/><rect x="44" y="34" width="2" height="6"/></g>
+      <rect x="18" y="29" width="11" height="4" rx="2" fill="#c75628"/><rect x="33" y="29" width="13" height="4" rx="2" fill="#e8703a"/>
+    </symbol>
+
+    <symbol id="ico-slipper" viewBox="0 0 64 64">
+      <!-- left flip-flop (toe up, splayed) -->
+      <g transform="translate(21,33) rotate(-11)">
+        <path d="M0,-14 C7.5,-14 9,-9 9,-4 C9,4 7,12 3,14 C1,15 -1,15 -3,14 C-7,12 -9,4 -9,-4 C-9,-9 -7.5,-14 0,-14 Z" fill="#2a9d8f" stroke="#1d6b66" stroke-width="1.5"/>
+        <path d="M-7.5,4 L0,-6 L7.5,4" fill="none" stroke="#f4b942" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="0" cy="-6" r="2.4" fill="#143d2b"/>
+      </g>
+      <!-- right flip-flop -->
+      <g transform="translate(43,33) rotate(11)">
+        <path d="M0,-14 C7.5,-14 9,-9 9,-4 C9,4 7,12 3,14 C1,15 -1,15 -3,14 C-7,12 -9,4 -9,-4 C-9,-9 -7.5,-14 0,-14 Z" fill="#2a9d8f" stroke="#1d6b66" stroke-width="1.5"/>
+        <path d="M-7.5,4 L0,-6 L7.5,4" fill="none" stroke="#f4b942" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="0" cy="-6" r="2.4" fill="#143d2b"/>
+      </g>
+    </symbol>
+
+    <symbol id="ico-pin" viewBox="0 0 64 64">
+      <path d="M32 6 C20 6 11 15 11 27 C11 42 32 58 32 58 C32 58 53 42 53 27 C53 15 44 6 32 6 Z" fill="#e8703a"/>
+      <circle cx="32" cy="27" r="9" fill="#fbf7ee"/>
+    </symbol>
+
+    <symbol id="ico-ticket" viewBox="0 0 64 64">
+      <path d="M8 22 h48 a4 4 0 0 1 4 4 v4 a6 6 0 0 0 0 12 v4 a4 4 0 0 1 -4 4 H8 a4 4 0 0 1 -4 -4 v-4 a6 6 0 0 0 0 -12 v-4 a4 4 0 0 1 4 -4 Z" fill="#2a9d8f"/>
+      <line x1="40" y1="24" x2="40" y2="44" stroke="#fbf7ee" stroke-width="2.5" stroke-dasharray="3 3"/>
+    </symbol>
+
+    <symbol id="ico-calendar" viewBox="0 0 64 64">
+      <rect x="10" y="14" width="44" height="42" rx="6" fill="#fff" stroke="#1f6b43" stroke-width="3.5"/>
+      <rect x="10" y="14" width="44" height="12" rx="6" fill="#e8703a"/>
+      <line x1="22" y1="8" x2="22" y2="20" stroke="#1f6b43" stroke-width="4" stroke-linecap="round"/>
+      <line x1="42" y1="8" x2="42" y2="20" stroke="#1f6b43" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="32" cy="38" r="3.4" fill="#e8703a"/>
+    </symbol>
+
+    <symbol id="deco-wave" viewBox="0 0 120 16">
+      <path d="M2 8 q14 -10 28 0 t28 0 t28 0 t28 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top">
+      <img class="emblem" src="img/ok-b.png" alt="OK Rafting 2026" />
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#zasto">Zašto</a>
+      <a href="#program">Program</a>
+      <a href="#info">Info</a>
+      <a href="#termini" id="navTermini" hidden>Termini</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Meni" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <!-- pozadina: rijeka, planine, sunce, čamac -->
+  <svg class="hero-scene" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#dff3e6"/><stop offset="1" stop-color="#fbf7ee"/>
+      </linearGradient>
+      <radialGradient id="sunglow" cx="50%" cy="50%" r="50%">
+        <stop offset="0" stop-color="#fbe6a3" stop-opacity=".9"/><stop offset="1" stop-color="#fbe6a3" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#4cb8ad"/><stop offset="1" stop-color="#1d6b66"/>
+      </linearGradient>
+    </defs>
+    <rect width="1440" height="900" fill="url(#sky)"/>
+    <circle cx="1170" cy="190" r="250" fill="url(#sunglow)"/>
+    <circle cx="1170" cy="190" r="74" fill="#f6c453"/>
+    <!-- oblaci -->
+    <g fill="#ffffff" opacity=".92">
+      <ellipse cx="250" cy="160" rx="72" ry="26"/><ellipse cx="305" cy="150" rx="52" ry="22"/>
+      <ellipse cx="720" cy="120" rx="92" ry="28"/><ellipse cx="785" cy="112" rx="56" ry="22"/>
+    </g>
+    <!-- ptice -->
+    <g class="birds" fill="none" stroke="#2f7d54" stroke-width="3" stroke-linecap="round">
+      <path d="M460 220 q14 -16 28 0 q14 -16 28 0"/>
+      <path d="M560 180 q10 -12 20 0 q10 -12 20 0"/>
+      <path d="M990 250 q12 -14 24 0 q12 -14 24 0"/>
+    </g>
+    <!-- planine -->
+    <polygon points="0,560 150,470 290,545 430,455 570,535 720,465 870,540 1010,470 1170,530 1310,460 1440,525 1440,660 0,660" fill="#aacfba"/>
+    <polygon points="0,610 130,530 270,605 390,520 530,610 660,525 800,610 940,535 1080,610 1220,525 1360,605 1440,555 1440,710 0,710" fill="#6fae86"/>
+    <polygon points="0,665 120,605 240,665 370,595 500,665 640,600 780,665 900,600 1030,665 1160,600 1290,665 1410,615 1440,665 1440,780 0,780" fill="#357a52"/>
+    <!-- borovi -->
+    <g fill="#1f6b43">
+      <polygon points="150,610 163,642 137,642"/><polygon points="150,628 165,662 135,662"/>
+      <polygon points="430,600 444,633 416,633"/>
+      <polygon points="880,600 894,635 866,635"/>
+      <polygon points="1080,665 1095,702 1065,702"/>
+    </g>
+    <!-- rijeka -->
+    <rect y="700" width="1440" height="200" fill="url(#water)"/>
+    <g fill="none" stroke="#bfeae5" stroke-width="3" opacity=".5" stroke-linecap="round">
+      <path d="M120 752 q30 -12 60 0 t60 0 t60 0"/>
+      <path d="M700 792 q30 -12 60 0 t60 0 t60 0"/>
+      <path d="M1000 742 q30 -12 60 0 t60 0"/>
+      <path d="M300 822 q30 -12 60 0 t60 0"/>
+    </g>
+    <!-- čamac -->
+    <g transform="translate(660,755)">
+      <g class="sboat">
+        <ellipse cx="0" cy="13" rx="64" ry="4" fill="#0d3b38" opacity=".22"/>
+        <path d="M-56 -3 C-40 -3 20 4 56 4" fill="none" stroke="#c75628" stroke-width="24" stroke-linecap="round"/>
+        <path d="M-56 -3 C-40 -3 20 4 56 4" fill="none" stroke="#e8703a" stroke-width="20" stroke-linecap="round"/>
+        <path d="M-48 -7 C-34 -7 14 0 44 0" fill="none" stroke="#f6a36b" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+        <g fill="#143d2b"><circle cx="-36" cy="-16" r="6.5"/><circle cx="-12" cy="-15" r="6.5"/><circle cx="12" cy="-14" r="6.5"/><circle cx="36" cy="-13" r="6.5"/></g>
+        <g stroke="#7a5230" stroke-width="2.5" stroke-linecap="round">
+          <line x1="-36" y1="-3" x2="-29" y2="21"/><line x1="-12" y1="-3" x2="-5" y2="21"/>
+          <line x1="12" y1="-3" x2="19" y2="21"/><line x1="36" y1="-3" x2="43" y2="21"/>
+        </g>
+        <g fill="#e8703a">
+          <ellipse cx="-29" cy="22" rx="2.4" ry="4.5"/><ellipse cx="-5" cy="22" rx="2.4" ry="4.5"/>
+          <ellipse cx="19" cy="22" rx="2.4" ry="4.5"/><ellipse cx="43" cy="22" rx="2.4" ry="4.5"/>
+        </g>
+      </g>
+    </g>
+    <!-- safety ring -->
+    <g transform="translate(870,760)">
+      <g class="sring">
+        <ellipse cx="0" cy="9" rx="22" ry="3.5" fill="#0d3b38" opacity=".2"/>
+        <path d="M0 -9 A22 9 0 1 0 0 9 A22 9 0 1 0 0 -9 Z M0 -3.5 A11 3.5 0 1 0 0 3.5 A11 3.5 0 1 0 0 -3.5 Z" fill="#e8703a" fill-rule="evenodd" stroke="#c75628" stroke-width="2"/>
+        <g fill="#fbf7ee">
+          <rect x="-5" y="-9.5" width="10" height="3" rx="1.2"/>
+          <rect x="-5" y="6.5" width="10" height="3" rx="1.2"/>
+          <rect x="-20.5" y="-3" width="3" height="6" rx="1.2"/>
+          <rect x="17.5" y="-3" width="3" height="6" rx="1.2"/>
+        </g>
+        <circle cx="0" cy="-5" r="6.5" fill="#143d2b"/>
+      </g>
+    </g>
+  </svg>
+
+  <div class="hero-card">
+    <img class="emblem" src="img/ok.png" alt="OK Rafting 2026" />
+    <h1>OK RAFTING</h1>
+    <div class="tag-year">· 2026 ·</div>
+    <div class="pills">
+      <span class="pill"><svg viewBox="0 0 64 64"><use href="#ico-calendar"/></svg> 16.08.2026 · NEDJELJA</span>
+      <span class="pill"><svg viewBox="0 0 64 64"><use href="#ico-pin"/></svg> DRINA · FOČA</span>
+    </div>
+    <p class="hero-tagline">Čamac, vesla, hladno pivo i dobra ekipa. Ima li boljeg načina da se uživa u ljetu?</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ VIBE / O NAMA — uredi tekst ============ -->
+  <section id="zasto">
+    <div class="container">
+      <div class="sec-head">
+        <span class="kicker">01 — ZAŠTO</span>
+        <h2 class="section-title">Jer život je jedan, živi ga, Fikreta.</h2>
+        <svg class="title-wave" viewBox="0 0 120 16"><use href="#deco-wave"/></svg>
+      </div>
+      <p class="vibe-text">
+        <b>OK Rafting 2026</b> je naše malo druženje na Drini. Rafting najljepšim kanjonima,
+        roštilj na obali, pauze na divljim plažama i nula obaveza. Samo ti, ekipa i rijeka.
+        Šta god da tražiš od ljeta, naći ćeš ga ovdje.
+      </p>
+
+      <div class="vibe-grid">
+        <div class="vibe-card">
+          <svg class="ico" viewBox="0 0 64 64"><use href="#ico-slipper"/></svg>
+          <h3>PAPUČE</h3>
+          <p>[Jedina obuća koja ti treba.]</p>
+        </div>
+        <div class="vibe-card">
+          <svg class="ico" viewBox="0 0 64 64"><use href="#ico-boat"/></svg>
+          <h3>ČAMAC</h3>
+          <p>[Šest mjesta, jedna misija.]</p>
+        </div>
+        <div class="vibe-card">
+          <svg class="ico" viewBox="0 0 64 64"><use href="#ico-paddle"/></svg>
+          <h3>VESLA</h3>
+          <p>[Veslaj kad se sjetiš, inače uživaj.]</p>
+        </div>
+        <div class="vibe-card">
+          <svg class="ico" viewBox="0 0 64 64"><use href="#ico-beer"/></svg>
+          <h3>PIVO</h3>
+          <p>[Hladno, obavezno tokom i nakon spusta.]</p>
+        </div>
+        <div class="vibe-card">
+          <svg class="ico" viewBox="0 0 64 64"><use href="#ico-grill"/></svg>
+          <h3>ROŠTILJ</h3>
+          <p>[Da se povrati snaga poslije piva i veslanja.]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROGRAM — uredi dane / sate ============ -->
+  <section id="program">
+    <div class="container">
+      <div class="sec-head">
+        <span class="kicker">02 — PROGRAM</span>
+        <h2 class="section-title">Dva dana, nula žurbe.</h2>
+        <svg class="title-wave" viewBox="0 0 120 16"><use href="#deco-wave"/></svg>
+        <p class="lead">Jedan dan za pripremu, drugi dan za uživanje.</p>
+      </div>
+
+      <div class="program-grid">
+        <!-- DAN 1 -->
+        <div class="day-card">
+          <div class="day-tag">DAN 1</div>
+          <div class="day-date">15.08 · subota</div>
+          <h3 class="day-title">Priprema</h3>
+          <ul class="timeline">
+            <li><span class="t">18:00</span><span class="x"><b>Dogovor u kafani R&amp;R</b>Kafa - piva</span></li>
+            <li><span class="t">18:10</span><span class="x"><b>Šta kupiti od pića?</b>Piva, rakija, G&amp;T itd.</span></li>
+            <li><span class="t">20:00</span><span class="x"><b>Kupovina</b></span></li>
+          </ul>
+        </div>
+
+        <!-- DAN 2 — glavni -->
+        <div class="day-card featured">
+          <span class="badge-glavni">GLAVNI DAN</span>
+          <div class="day-tag">DAN 2</div>
+          <div class="day-date">16.08 · nedjelja</div>
+          <h3 class="day-title">RAFTING DRINOM</h3>
+          <ul class="timeline">
+            <li><span class="t">09:00</span><span class="x"><b>Dolazak u kamp</b></span></li>
+            <li><span class="t">10:00</span><span class="x"><b>Start raftinga</b></span></li>
+            <li><span class="t">14:00</span><span class="x"><b>Ručak</b></span></li>
+            <li><span class="t">16:00</span><span class="x"><b>Kraj raftinga i dolazak u Foču</b></span></li>
+            <li><span class="t">17:00</span><span class="x"><b>Povratak u kamp, sumiranje utisaka i razlaz</b></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INFO — uredi cijenu / opremu / put ============ -->
+  <section id="info">
+    <div class="container">
+      <div class="sec-head">
+        <span class="kicker">03 — INFO</span>
+        <h2 class="section-title">Sve što ti treba.</h2>
+        <svg class="title-wave" viewBox="0 0 120 16"><use href="#deco-wave"/></svg>
+        <p class="lead">Da rezimiramo.</p>
+      </div>
+
+      <div class="info-grid">
+        <!-- CIJENA -->
+        <div class="info-card">
+          <div class="head">
+            <svg class="ico" viewBox="0 0 64 64"><use href="#ico-ticket"/></svg>
+            <h3>CIJENA</h3>
+          </div>
+          <div class="price-big">80 KM</div>
+          <div class="price-sub">Po osobi</div>
+        </div>
+
+        <!-- UKLJUČENO -->
+        <div class="info-card">
+          <div class="head">
+            <svg class="ico" viewBox="0 0 64 64"><use href="#ico-boat"/></svg>
+            <h3>ŠTA JE UKLJUČENO</h3>
+          </div>
+          <ul class="checklist">
+            <li>Rafting sa licenciranim vodičem</li>
+            <li>Kompletna oprema (neopren, prsluk, kaciga, veslo)</li>
+            <li>Čamac i prijevoz do starta</li>
+            <li>Hrana - Roštilj</li>
+            <li>Bogat nekulturni program</li>
+          </ul>
+        </div>
+
+        <!-- PONIJETI -->
+        <div class="info-card">
+          <div class="head">
+            <svg class="ico" viewBox="0 0 64 64"><use href="#ico-slipper"/></svg>
+            <h3>ŠTA PONIJETI</h3>
+          </div>
+          <ul class="checklist">
+            <li>Kupaći i peškir</li>
+            <li>Papuče / cipele za vodu</li>
+            <li>Krema za sunce, šešir / kačket i naočale</li>
+            <li>Suha odjeća za poslije spusta</li>
+            <li>Dobro raspoloženje 🍻</li>
+          </ul>
+        </div>
+
+        <!-- KAKO DOĆI -->
+        <div class="info-card">
+          <div class="head">
+            <svg class="ico" viewBox="0 0 64 64"><use href="#ico-pin"/></svg>
+            <h3>KAKO DOĆI</h3>
+          </div>
+          <p style="margin:8px 0 0;color:var(--muted)">Foča, BiH.</p>
+          <div class="travel-note">
+            📍 GPS: <b>43.357681, 18.814523</b><br>
+            <a href="https://maps.app.goo.gl/MhgX5Dz4YG5zhoEJ6?g_st=iv" target="_blank" rel="noopener">Otvori u Google Maps ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TERMINI — slobodni datumi ============ -->
+  <section id="termini" hidden>
+    <div class="container">
+      <div class="sec-head">
+        <span class="kicker">04 — TERMINI</span>
+        <h2 class="section-title">Slobodni datumi.</h2>
+        <svg class="title-wave" viewBox="0 0 120 16"><use href="#deco-wave"/></svg>
+      </div>
+      <p class="cal-intro">Pregled termina na Drini. Zeleni datumi su slobodni termini, crveni su zauzeti. Za rezervaciju — telefon ili Viber (dole).</p>
+
+      <div class="cal-wrap">
+        <div class="cal-head">
+          <button class="cal-nav" id="calPrev" type="button" aria-label="Prethodni mjesec">‹</button>
+          <div class="cal-month" id="calMonth">—</div>
+          <button class="cal-nav" id="calNext" type="button" aria-label="Sljedeći mjesec">›</button>
+        </div>
+        <div class="cal-grid cal-dow">
+          <span>Pon</span><span>Uto</span><span>Sri</span><span>Čet</span><span>Pet</span><span>Sub</span><span>Ned</span>
+        </div>
+        <div class="cal-grid cal-days" id="calDays"></div>
+        <div class="cal-legend">
+          <span class="lg"><i class="dot dot-free"></i> Slobodno</span>
+          <span class="lg"><i class="dot dot-busy"></i> Zauzeto</span>
+        </div>
+      </div>
+      <p class="cal-hint">Termini se osvježavaju automatski iz našeg kalendara.</p>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <svg class="cta-bg" viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="cta-water" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#1d6b66"/>
+          <stop offset="1" stop-color="#2a9d8f"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="1440" height="132" fill="url(#cta-water)"/>
+      <path d="M0 96 Q 360 86 720 96 T 1440 96" fill="none" stroke="#7fc4bb" stroke-width="2" opacity=".45"/>
+      <polygon points="0,140 180,118 380,138 560,114 760,134 960,112 1160,136 1340,118 1440,132 1440,420 0,420" fill="#2f7d54"/>
+      <polygon points="0,236 160,210 340,234 540,208 740,230 920,210 1120,236 1320,214 1440,228 1440,420 0,420" fill="#143d2b"/>
+    </svg>
+    <div class="cta-card">
+      <h2 class="cta-title">REZERVIŠI MJESTO</h2>
+      <div class="countdown" id="countdown" aria-label="Odbrojavanje do starta">
+        <div class="cd-unit"><span class="cd-num" id="cd-d">--</span><span class="cd-lbl">dana</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cd-h">--</span><span class="cd-lbl">sati</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cd-m">--</span><span class="cd-lbl">min</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cd-s">--</span><span class="cd-lbl">sek</span></div>
+      </div>
+      <p class="cta-sub" id="ctaSub">Do sljedećeg slobodnog termina</p>
+      <p class="cta-text">Rezervišite svoje mjesto što prije jer je broj mjesta ograničen. Za dodatne informacije kontaktirajte me na telefon ili pišite u Viber grupu.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bottom">
+  <div class="container">
+    OK Rafting 2026 · Drina · Foča · <b style="color:#cfe2d6">Budi OK</b> 🛶
+    <div class="social">
+      <a href="https://www.instagram.com/explore/locations/264231443/foca-republica-srpska-bosnia-and-herzegovina/?hl=en" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.43-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38C1.35 2.68.94 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.38-2.13C21.32 1.35 20.65.94 19.86.63 19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0z"/><path d="M12 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4z"/><circle cx="18.41" cy="5.59" r="1.44"/></svg></a>
+      <a href="https://youtube.com/@vladosam?si=1CAbrpHtUdyasBU5" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg></a>
+    </div>
+    <div style="margin-top:6px;font-size:.8rem;opacity:.75">by vladosam</div>
+  </div>
+</footer>
+<script>
+(function(){
+  var btn=document.getElementById('navToggle');
+  var links=document.getElementById('navLinks');
+  if(!btn||!links) return;
+  function set(o){
+    var open=arguments.length?o:!btn.classList.contains('open');
+    btn.classList.toggle('open',open);
+    links.classList.toggle('open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  }
+  btn.addEventListener('click',function(){set()});
+  links.addEventListener('click',function(e){ if(e.target.tagName==='A') set(false); });
+  window.addEventListener('resize',function(){ if(window.innerWidth>860) set(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
+})();
+</script>
+<script>
+/* ---------- AVAILABILITY AUTO-REFRESH (shared) ----------
+   One fetcher for the calendar + countdown. Fetches availability.json on
+   load, then every 5 min while the tab is visible, and immediately when the
+   visitor returns to the tab. Listeners fire ONLY when trips actually
+   changed, so nothing flickers. On a failed fetch the old data is kept;
+   listeners get null only if the very first load fails. */
+(function(){
+  var listeners=[],lastSig=null,lastFetch=0,loaded=false;
+  function sig(d){try{return JSON.stringify((d&&d.trips)||[]);}catch(e){return '';}}
+  function fetchNow(){
+    lastFetch=Date.now();
+    fetch('availability.json',{cache:'no-store'})
+      .then(function(r){return r.ok?r.json():Promise.reject();})
+      .then(function(data){
+        loaded=true;
+        var s=sig(data);
+        if(s===lastSig) return;
+        lastSig=s;
+        listeners.forEach(function(fn){try{fn(data);}catch(e){}});
+      })
+      .catch(function(){
+        if(!loaded) listeners.forEach(function(fn){try{fn(null);}catch(e){}});
+      });
+  }
+  window.OKAvailability={subscribe:function(fn){listeners.push(fn);},refresh:fetchNow};
+  fetchNow();
+  setInterval(function(){ if(!document.hidden) fetchNow(); },300000);
+  document.addEventListener('visibilitychange',function(){
+    if(!document.hidden && Date.now()-lastFetch>60000) fetchNow();
+  });
+})();
+</script>
+<script>
+/* Countdown to the next available (slobodno) trip, read from availability.json.
+   Target = local midnight (00:00) at the start of the next available date.
+   If no available date lies ahead (or the JSON fails to load), the timer is
+   hidden and the visitor is pointed to phone / Viber; the booking CTA stays. */
+(function(){
+  var box=document.getElementById('countdown');
+  if(!box) return;
+  var boxHTML=box.innerHTML;
+  var dEl,hEl,mEl,sEl;
+  var sub=document.getElementById('ctaSub'),h=null;
+  function pad(n){return n<10?'0'+n:''+n;}
+  function fmt(iso){var p=iso.split('-');return p[2]+'.'+p[1]+'.'+p[0];}
+  function done(){
+    if(h){clearInterval(h);h=null;}
+    box.textContent='';
+    var go=document.createElement('div');
+    go.className='cd-go';
+    go.textContent='Danas je slobodan termin!';
+    box.appendChild(go);
+    if(sub) sub.hidden=true;
+  }
+  function startCountdown(target){
+    if(h){clearInterval(h);h=null;}
+    function tick(){
+      var diff=target-new Date();
+      if(diff<=0){done();return;}
+      dEl.textContent=pad(Math.floor(diff/864e5));
+      hEl.textContent=pad(Math.floor(diff%864e5/36e5));
+      mEl.textContent=pad(Math.floor(diff%36e5/6e4));
+      sEl.textContent=pad(Math.floor(diff%6e4/1e3));
+    }
+    tick();
+    h=setInterval(tick,1000);
+  }
+  function noSpots(){
+    box.hidden=true;
+    if(sub){sub.textContent='Trenutno nema slobodnih termina — javite se na telefon ili Viber.';sub.hidden=false;}
+  }
+  function init(data){
+    var trips=(data&&data.trips)||[],now=new Date(),next=null;
+    for(var i=0;i<trips.length;i++){
+      var t=trips[i];
+      if(t.status!=='available') continue;
+      var target=new Date(t.date+'T00:00:00');
+      if(target>now){next={date:t.date,target:target};break;}
+    }
+    if(!next){noSpots();return;}
+    if(sub){sub.textContent='Do sljedećeg slobodnog termina · '+fmt(next.date);sub.hidden=false;}
+    box.innerHTML=boxHTML;box.hidden=false;
+    dEl=document.getElementById('cd-d');hEl=document.getElementById('cd-h');
+    mEl=document.getElementById('cd-m');sEl=document.getElementById('cd-s');
+    startCountdown(next.target);
+  }
+  window.OKAvailability.subscribe(init);
+})();
+</script>
+<script>
+/* ---------- AVAILABILITY CALENDAR (read-only) ---------- */
+(function(){
+  var sec=document.getElementById('termini');
+  if(!sec) return;
+  var navLink=document.getElementById('navTermini');
+  var monthEl=document.getElementById('calMonth');
+  var daysEl=document.getElementById('calDays');
+  var prevBtn=document.getElementById('calPrev');
+  var nextBtn=document.getElementById('calNext');
+
+  var MON=['JANUAR','FEBRUAR','MART','APRIL','MAJ','JUNI','JULI','AVGUST','SEPTEMBAR','OKTOBAR','NOVEMBAR','DECEMBAR'];
+  var trips={}, minYM=null, maxYM=null, view=null;
+
+  function key(ym){return ym.y*12+ym.m;}
+  function parseYM(s){var p=s.split('-');return {y:parseInt(p[0],10),m:parseInt(p[1],10)-1};}
+  function pad(n){return n<10?'0'+n:''+n;}
+
+  function render(){
+    var y=view.y, m=view.m;
+    monthEl.textContent=MON[m]+' '+y;
+    prevBtn.disabled=(key(view)<=key(minYM));
+    nextBtn.disabled=(key(view)>=key(maxYM));
+
+    var startDow=(new Date(y,m,1).getDay()+6)%7;          /* Mon=0 */
+    var daysInMonth=new Date(y,m+1,0).getDate();
+    var prevDays=new Date(y,m,0).getDate();
+
+    var now=new Date();
+    var todayKey=now.getFullYear()+'-'+pad(now.getMonth()+1)+'-'+pad(now.getDate());
+
+    var cells=[];
+    for(var i=startDow-1;i>=0;i--) cells.push({day:prevDays-i,out:true});
+    for(var d=1;d<=daysInMonth;d++){
+      var k=y+'-'+pad(m+1)+'-'+pad(d);
+      cells.push({day:d,key:k,status:trips[k],today:(k===todayKey)});
+    }
+    var trail=1;
+    while(cells.length%7!==0) cells.push({day:trail++,out:true});
+
+    daysEl.innerHTML='';
+    cells.forEach(function(c){
+      var el=document.createElement('div');
+      el.className='cal-day';
+      if(c.out) el.classList.add('out');
+      if(c.today) el.classList.add('today');
+      if(c.status==='available'){el.classList.add('free');el.title='Slobodno';}
+      else if(c.status==='reserved'){el.classList.add('busy');el.title='Zauzeto';}
+      var num=document.createElement('span');
+      num.className='num';
+      num.textContent=c.day;
+      el.appendChild(num);
+      daysEl.appendChild(el);
+    });
+  }
+
+  prevBtn && prevBtn.addEventListener('click',function(){
+    if(key(view)<=key(minYM)) return;
+    view=(view.m===0)?{y:view.y-1,m:11}:{y:view.y,m:view.m-1};
+    render();
+  });
+  nextBtn && nextBtn.addEventListener('click',function(){
+    if(key(view)>=key(maxYM)) return;
+    view=(view.m===11)?{y:view.y+1,m:0}:{y:view.y,m:view.m+1};
+    render();
+  });
+
+  function update(data){
+    trips={};
+    var arr=(data&&Array.isArray(data.trips))?data.trips:[];
+    if(!arr.length){
+      sec.setAttribute('hidden','');
+      if(navLink) navLink.setAttribute('hidden','');
+      return;
+    }
+    arr.forEach(function(t){ if(t&&t.date) trips[t.date]=t.status||'available'; });
+    var ks=Object.keys(trips).sort();
+    minYM=parseYM(ks[0]); maxYM=parseYM(ks[ks.length-1]);
+    if(view===null){
+      var cur={y:new Date().getFullYear(),m:new Date().getMonth()};
+      if(key(cur)<key(minYM)) view=minYM;
+      else if(key(cur)>key(maxYM)) view=maxYM;
+      else view=cur;
+    }
+    else {
+      if(key(view)<key(minYM)) view=minYM;
+      if(key(view)>key(maxYM)) view=maxYM;
+    }
+    sec.removeAttribute('hidden');
+    if(navLink) navLink.removeAttribute('hidden');
+    render();
+  }
+  window.OKAvailability.subscribe(update);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+name: Sync calendar
+
+# Reads Google Calendar and commits availability.json when it changes.
+# Triggered every 15 min by the Cloudflare Worker via repository_dispatch
+# (GitHub's own scheduler proved unreliable — see worker/SETUP.md).
+# Commits made by GITHUB_TOKEN do NOT re-trigger workflows, so no loop.
+on:
+  push:
+    branches: [main]
+  repository_dispatch:        # primary 15-min trigger — fired by the
+    types: [sync-calendar]    # Cloudflare Worker (see worker/SETUP.md)
+  workflow_dispatch:          # manual "Run workflow" button
+
+permissions:
+  contents: write            # allow the bot to commit availability.json
+
+concurrency:
+  group: sync-calendar
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install -r scripts/requirements.txt
+
+      - name: Sync from Google Calendar
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_CALENDAR_ID: ${{ secrets.GOOGLE_CALENDAR_ID }}
+        run: python scripts/sync-calendar.py
+
+      - name: Commit availability.json if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Another sync run may have pushed since this checkout, so always
+          # land the freshly generated file on top of the latest remote tip.
+          git fetch origin main
+          cp availability.json /tmp/availability.json
+          git checkout -- availability.json
+          git checkout -B main origin/main
+          cp /tmp/availability.json availability.json
+          git add availability.json
+          if git diff --cached --quiet; then
+            echo "No changes — availability.json unchanged."
+          else
+            git commit -m "chore: sync availability.json"
+            git push
+          fi

@@ -1,0 +1,25 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Backups
+*.bkp
+*.bak
+
+# Python (if anyone runs the sync locally)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Never commit secrets / real credentials
+google-key.json
+service-account*.json
+config.json
+
+# Local-only docs (never deployed; removed from tracking)
+*.md
+
+# Node (not used, but just in case)
+node_modules/

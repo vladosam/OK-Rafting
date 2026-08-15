@@ -1,0 +1,3 @@
+# Python deps for the calendar sync (scripts/sync-calendar.py)
+google-auth
+requests

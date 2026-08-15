@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-08-14T11:59:43Z",
+  "trips": [
+    {
+      "date": "2026-08-15",
+      "status": "reserved"
+    },
+    {
+      "date": "2026-08-16",
+      "status": "reserved"
+    },
+    {
+      "date": "2026-08-18",
+      "status": "reserved"
+    },
+    {
+      "date": "2026-08-19",
+      "status": "reserved"
+    },
+    {
+      "date": "2026-08-20",
+      "status": "available",
+      "title": "TEST1"
+    }
+  ]
+}
