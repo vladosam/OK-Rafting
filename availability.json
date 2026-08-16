@@ -1,10 +1,6 @@
 {
-  "generatedAt": "2026-08-15T22:07:47Z",
+  "generatedAt": "2026-08-16T22:07:48Z",
   "trips": [
-    {
-      "date": "2026-08-16",
-      "status": "reserved"
-    },
     {
       "date": "2026-08-18",
       "status": "reserved"
